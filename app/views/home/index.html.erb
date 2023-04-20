@@ -1,6 +1,6 @@
 <div class="container">
   <%= turbo_frame_tag "time" do %>
-    <h1><%= display_time %></h1>
+    <h1 class="text-3xl font-bold"><%= display_time %></h1>
   <% end %>
-  <%= button_to "Refresh Time", root_path, method: :get, data: { turbo: "replace", turbo_frame: "time" } %>
+  <%= button_to "Refresh Time", root_path, method: :get, data: { turbo: "replace", turbo_frame: "time" }, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
 </div>
