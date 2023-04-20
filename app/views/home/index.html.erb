@@ -1,0 +1,6 @@
+<div class="container">
+  <%= turbo_frame_tag "time" do %>
+    <h1><%= display_time %></h1>
+  <% end %>
+  <%= button_to "Refresh Time", root_path, method: :get, data: { turbo: "replace", turbo_frame: "time" } %>
+</div>
